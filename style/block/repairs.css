@@ -129,9 +129,47 @@
   left: -38px;
   background-image: url("../../images/icon/clock.svg");
 }
+.repairs__link_headphones {
+  position: relative;
+}
+.repairs__link_headphones::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 0;
+  left: -38px;
+  background-image: url("../../images/icon/headphones.svg");
+}
+.repairs__link_calendar {
+  position: relative;
+}
+.repairs__link_calendar::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: -38px;
+  background-image: url("../../images/icon/calendar.svg");
+}
+.repairs__link_pin {
+  position: relative;
+}
+.repairs__link_pin::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 0;
+  left: -38px;
+  background-image: url("../../images/icon/pin.svg");
+}
 .repairs__right {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .repairs__img {
   width: 100%;

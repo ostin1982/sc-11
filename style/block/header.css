@@ -56,6 +56,10 @@
   line-height: 20px;
   color: var(--color-white);
 }
+.header__link_active {
+  color: var(--color-main);
+  text-decoration: underline;
+}
 .header__link:hover {
   color: var(--color-main);
   text-decoration: none;

@@ -99,6 +99,11 @@
     overflow-x: scroll;
     min-width: auto;
   }
+  .stage__left::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    background: var(--color-background);
+  }
   .stage__list {
     min-width: 254px;
     border-radius: 8px;

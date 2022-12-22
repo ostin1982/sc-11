@@ -131,6 +131,29 @@
         &_active
             display: flex
 
+    &__contacts
+        padding: 12px 0
+
+    &__address
+        font-weight: 500
+        font-size: $font-small
+        line-height: 140%
+
+        &_400
+            font-weight: 400
+            color: var(--color-black)
+
+            &:hover
+                text-decoration: none
+                color: var(--color-main)
+
+        &_401
+            font-weight: 400
+            color: var(--color-black)
+
+        &_br
+            display: none
+
 @media screen and (max-width: 960px) 
     .emergency
         &__left
@@ -168,3 +191,14 @@
         &__img
             width: 50px
             height: 50px
+
+@media screen and (max-width: 720px) 
+    .emergency
+        &__address
+            padding-bottom: 10px
+
+            &:last-child
+                padding-bottom: 0
+
+            &_br
+                display: block

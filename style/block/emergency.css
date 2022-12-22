@@ -149,6 +149,29 @@
 .emergency__sorry_active {
   display: flex;
 }
+.emergency__contacts {
+  padding: 12px 0;
+}
+.emergency__address {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+.emergency__address_400 {
+  font-weight: 400;
+  color: var(--color-black);
+}
+.emergency__address_400:hover {
+  text-decoration: none;
+  color: var(--color-main);
+}
+.emergency__address_401 {
+  font-weight: 400;
+  color: var(--color-black);
+}
+.emergency__address_br {
+  display: none;
+}
 
 @media screen and (max-width: 960px) {
   .emergency__left {
@@ -186,5 +209,16 @@
   .emergency__img {
     width: 50px;
     height: 50px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .emergency__address {
+    padding-bottom: 10px;
+  }
+  .emergency__address:last-child {
+    padding-bottom: 0;
+  }
+  .emergency__address_br {
+    display: block;
   }
 }/*# sourceMappingURL=emergency.css.map */
