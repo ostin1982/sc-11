@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link  rel="stylesheet" href="style/normalize.css">
+    <link  rel="stylesheet" href="style/uikit.min.css">
+    <link  rel="stylesheet" href="style/style.css">
+    <script defer src="script/jQuery-3.6.1.js"></script>
+    <script defer src="script/jquery.maskedinput.min.js"></script>
+    <script defer src="script/uikit.min.js"></script>
+    <script defer src="script/script.js"></script>
+    <title>Galaxy service</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-between uk-flex-middle">
+                    <div>
+                        <p class="uk-margin-remove header__address">Москва, ул 10-я Парковая, дом 20 строение 1, офис 7</p>
+                    </div>
+                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                        <p class="uk-margin-remove header__address header__address_padding">Ежедневно и круглосуточно</p>
+                        <a href="+74950326333" class="uk-margin-remove header__telephone">+7 495 032-63-33</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom" uk-sticky>
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-between uk-flex-middle" >
+                    <div class="header__status">
+                        <a href="#" type="button" uk-toggle="target: #modal-status">
+                            <img src="images/icon/clipboard.svg" alt="иконка статус заказа">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <picture>
+                                <source srcset="images/logo-small.png" media="(max-width: 1024px)" />
+                                <img src="images/logo-big.png" alt="logo">
+                            </picture>
+                        </a>
+                    </div>
+                    <nav class="uk-width-1-2@s uk-width-2-5@m header__nav">
+                        <ul class="uk-margin-remove uk-flex uk-flex-between uk-flex-middle">
+                            <li>
+                                <a href="#" class="uk-margin-remove header__link">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#" class="uk-margin-remove header__link">Цены</a>
+                            </li>
+                            <li>
+                                <a href="#" class="uk-margin-remove header__link">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#" class="uk-margin-remove header__link header__link_active">О нас</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__buttons">
+                        <button class="button button__black" type="button" uk-toggle="target: #modal-status">Статус заказа</button>
+                        <button class="button button__dark" type="button" uk-toggle="target: #modal-sign-up">Заказать ремонт</button>
+                    </div>
+                    <div class="header__hidden">
+                        <div class="header__burger">
+                            <a href="#">
+                                <img src="images/icon/menu.svg" type="button" uk-toggle="target: #offcanvas-overlay" alt="иконка меню">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+                        <div class="uk-offcanvas-bar header__menu">
+                            <a class="uk-offcanvas-close" type="button">
+                                <img src="images/icon/cross.svg" alt="">
+                            </a>
+                            <div class="uk-flex uk-flex-left uk-flex-middle uk-flex-column">
+                                <div class="header__logo">
+                                    <img src="images/logo-major.png" alt="логотип">
+                                </div>
+                                <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-2 uk-text-center header__padding" uk-grid>
+                                    <p class="uk-margin-remove header__direction">Москва, ул 10-я Парковая, дом 20 строение 1, офис 7</p>
+                                    <div class="uk-margin-remove header__box">
+                                        <a href="tel: +74950326333" class="uk-margin-remove header__phone">+7 495 032-63-33</a>
+                                        <p class="uk-margin-remove header__daily">Ежедневно и круглосуточно</p>
+                                    </div>
+                                </div>
+                                <ul class="header__checklist">
+                                    <li class="header__ref">
+                                        <a href="#" class="uk-margin-remove header__transition">Главная</a>
+                                    </li>
+                                    <li class="header__ref">
+                                        <a href="#" class="uk-margin-remove header__transition">Цены</a>
+                                    </li>
+                                    <li class="header__ref">
+                                        <a href="#" class="uk-margin-remove header__transition">Контакты</a>
+                                    </li>
+                                    <li class="header__ref">
+                                        <a href="#" class="uk-margin-remove header__transition">О нас</a>
+                                    </li>
+                                </ul>
+                                <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-column header__big">
+                                    <button class="button button__black button__black_small" type="button" uk-toggle="target: #modal-status">Статус заказа</button>
+                                    <button class="button button__dark button__dark_small" type="button" uk-toggle="target: #modal-sign-up">Заказать ремонт</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="breadcrumb">
+        <div class="uk-container">
+            <ul class="uk-flex uk-flex-left uk-flex-middle breadcrumb__list">
+                <li>
+                    <a href="#" class="breadcrumb__title">Главная</a>
+                </li>
+                <li>
+                    <span class="breadcrumb__subtitle">О Нас</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="repairs">
+        <div class="uk-container">
+            <div class="repairs__block">
+                <div uk-grid>
+                    <div class="uk-width-auto@m">
+                        <div class="repairs__left">
+                            <h1 class="uk-margin-remove repairs__heading">Контакты для связи с нашим сервисом</h1>
+                            <ul class="uk-margin-remove repairs__list">
+                                <li class="repairs__link repairs__link_headphones">Оперативная техподдержка</li>
+                                <li class="repairs__link repairs__link_calendar">Без праздников и выходных</li>
+                                <li class="repairs__link repairs__link_pin">Выезд курьера в любую точку Москвы</li>
+                            </ul>
+                            <button class="button button__repairs" type="button" uk-toggle="target: #modal-thanks">Заказать звонок</button>
+                        </div>
+                    </div>
+                    <div class="uk-width-expand@m repairs__right">
+                        <img src="images/operator.png" alt="оператор нашей компании собирается принять Ваш звонок" class="repairs__img">
+                        <button class="button button__repairs_none" type="button" uk-toggle="target: #modal-thanks">Заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="emergency">
+        <div class="uk-container">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-auto@m" >
+                    <div class="emergency__left">
+                        <p class="uk-margin-remove emergency__subtitle  emergency__subtitle_padding">Цель Galaxy Service — обеспечить удовлетворение потребностей посетителей в ремонте и обслуживании высокого качества. Основное требование, которое выдвигают все владельцы к технике фирмы Самсунг — работа устройств без возникновения сбоев. Если произойдет поломка, то можно воспользоваться снижением цен, предлагаемых в различных мастерских.Но даже самая выгодная на первый взгляд акция не гарантирует повторной поломки устройства.</p>
+                        <p class="uk-margin-remove emergency__subtitle">Специалисты сервисного центра обладают высокой квалификацией, чтобы клиенты спокойно смогли доверить нам ремонт своего любимого устройства. Принцип работы компании строится на основах реализации профессионального подхода в процессах ремонта и обслуживания техники Samsung. В своей работе руководствуемся знаниями, полученные специалистами в результате длительного опыта.</p>
+                        <p class="uk-margin-remove emergency__subtitle">Любой вид устройств, который производит этот, нуждается в бережном и аккуратном отношении. Своевременная профилактика и забота об устройствах может помочь в предупреждении возможных проблем. Тогда сервисный центр Galaxy Service не придется часто посещать. Но если потребуется поддержка, то к нам можно смело обратиться в любой необходимый момент!</p>
+                    </div>
+                </div>
+                <div class="uk-width-expand@m">
+                    <div class="emergency__right">
+                        <div uk-grid>
+                            <div class="uk-width-expand">
+                                <a href="tel: 74951060627" class="uk-margin-remove emergency__telephone">7 (495) 106-06-27</a>
+                                <p class="uk-margin-remove emergency__text">Номер телефона сервиса</p>
+                            </div>
+                            <div class="uk-width-auto">
+                                <picture>
+                                    <source srcset="images/icon/cloud-small.png" media="(max-width: 720px)"/>
+                                    <img src="images/icon/cloud.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="emergency__request">
+                            <div class="emergency__middle">
+                                <h3 class="uk-margin-remove emergency__caption">Спросите экспертов</h3>
+                                <p class="uk-margin-remove emergency__version">Получите консультацию специалистов нашего сервисного центра по вопросам ремонта и обслуживания техники.</p>
+                            </div>
+                            <form class="uk-flex-between uk-flex-top uk-flex-column emergency__form">
+                                <input class="input input__emergency js-phone" name="tel" type="tel" placeholder="Ваш номер телефона">
+                                <input class="input input__emergency" name="text" type="text" placeholder="Имя и фаимлия">
+                                <textarea class="textarea" name="textarea">Ваш вопрос</textarea>
+                                <button class="button button__emergency js-ask">Задать вопрос</button>
+                            </form>
+                            <p class="uk-margin-remove emergency__small">Отправляя свои данные вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</p>
+                        </div>
+                        <div class="uk-flex-column uk-flex-between uk-flex-middle emergency__thanks">
+                            <img src="images/icon/check.svg" alt="" class="emergency__img">
+                            <p class="uk-margin-remove emergency__big">Спасибо, обращение принято</p>
+                            <p class="uk-margin-remove emergency__tiny">В течение 5 минут один из специалистов Galaxy Service свяжется с вами</p>
+                        </div>
+                        <div class="uk-flex-column uk-flex-between uk-flex-middle emergency__sorry">
+                            <img src="images/icon/error.svg" alt="" class="emergency__img">
+                            <p class="uk-margin-remove emergency__big">Ошибочка</p>
+                            <p class="uk-margin-remove emergency__tiny">Неверно введены данные, попробуйте снова</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stage">
+        <div class="uk-container">
+            <h2 class="uk-margin-remove stage__title">Ознакомьтесь с 5 ключевыми<br>этапами ремонта</h2>
+            <div class="uk-grid-column-small uk-grid-match" uk-grid>
+                <div class="uk-width-auto@m">
+                    <ul class="uk-nav uk-nav-default stage__left" uk-switcher="connect: #component-nav; animation: uk-animation-fade">
+                        <li class="uk-flex uk-flex-between uk-flex-middle uk-flex-column stage__list">
+                            <a href="#" class="uk-padding-remove stage__link">1) Доставка оборудования в сервис центр</a>
+                        </li>
+                        <li class="uk-flex uk-flex-between uk-flex-middle uk-flex-column stage__list">
+                            <a href="#" class="uk-padding-remove stage__link">2) Диагностика оборудования</a>
+                        </li>
+                        <li class="uk-flex uk-flex-between uk-flex-middle uk-flex-column stage__list">
+                            <a href="#" class="uk-padding-remove stage__link">3) Согласование условий</a>
+                        </li>
+                        <li class="uk-flex uk-flex-between uk-flex-middle uk-flex-column stage__list">
+                            <a href="#" class="uk-padding-remove stage__link">4) Реализация услуг</a>
+                        </li>
+                        <li class="uk-flex uk-flex-between uk-flex-middle uk-flex-column stage__list">
+                            <a href="#" class="uk-padding-remove stage__link">5) Принимаете готовую технику</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-width-expand@m">
+                    <ul id="component-nav" class="uk-switcher">
+                        <li>
+                            <div class="uk-flex uk-flex-between uk-flex-middle stage__card">
+                                <div class="uk-flex uk-flex-center uk-flex-middle stage__background">
+                                    <img src="images/icon/delivery.png" alt="иконка " class="stage__img">
+                                </div>
+                                <div class="stage__text">
+                                    <dl>
+                                        <dt class="uk-flex uk-flex-center uk-flex-middle stage__number">1</dt>
+                                        <dd class="stage__head">Доставка оборудования в сервис центр</dd>
+                                        <dd class="stage__wording">Вы или наш курьер привозите аппарат в сервис Samsung. Вызов курьера предоставляется бесплатно.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-flex uk-flex-between uk-flex-middle stage__card">
+                                <div class="uk-flex uk-flex-center uk-flex-middle stage__background">
+                                    <img src="images/icon/gears.png" alt="иконка " class="stage__img">
+                                </div>
+                                <div class="stage__text">
+                                    <dl>
+                                        <dt class="uk-flex uk-flex-center uk-flex-middle stage__number">2</dt>
+                                        <dd class="stage__head">Диагностика оборудования</dd>
+                                        <dd class="stage__wording">Специалист найдет неполадку в оборудовании: техническую или аппаратную. Затем подберет подходящие оригинальные комплектующие.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-flex uk-flex-between uk-flex-middle stage__card">
+                                <div class="uk-flex uk-flex-center uk-flex-middle stage__background">
+                                    <img src="images/icon/mobile.png" alt="иконка " class="stage__img">
+                                </div>
+                                <div class="stage__text">
+                                    <dl>
+                                        <dt class="uk-flex uk-flex-center uk-flex-middle stage__number">3</dt>
+                                        <dd class="stage__head">Согласование условий</dd>
+                                        <dd class="stage__wording">Сотрудники колл центра обговарят с вами все условия ремонта: стоимость, продолжительность, гарантийные правила.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-flex uk-flex-between uk-flex-middle stage__card">
+                                <div class="uk-flex uk-flex-center uk-flex-middle stage__background">
+                                    <img src="images/icon/puzzle.png" alt="иконка " class="stage__img">
+                                </div>
+                                <div class="stage__text">
+                                    <dl>
+                                        <dt class="uk-flex uk-flex-center uk-flex-middle stage__number">4</dt>
+                                        <dd class="stage__head">Реализация услуг</dd>
+                                        <dd class="stage__wording">Мастер сервисного центра проведет ремонт: заменит дефектную комплектующую новой качественной деталью.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-flex uk-flex-between uk-flex-middle stage__card">
+                                <div class="uk-flex uk-flex-center uk-flex-middle stage__background">
+                                    <img src="images/icon/technic.png" alt="иконка " class="stage__img">
+                                </div>
+                                <div class="stage__text">
+                                    <dl>
+                                        <dt class="uk-flex uk-flex-center uk-flex-middle stage__number">5</dt>
+                                        <dd class="stage__head">Принимаете готовую технику</dd>
+                                        <dd class="stage__wording">По окончанию ремонта вы получите работоспособное устройство c гарантийным сертификатом Samsung.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="uk-container">
+            <div class="uk-text-center footer__top" uk-grid>
+                <div class="uk-width-auto@m">
+                    <h2 class="uk-margin-remove footer__title">Ремонт</h2>
+                    <div class="uk-flex uk-flex-between uk-flex-top footer__block">
+                        <ul class="uk-margin-remove uk-padding-remove">
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Смартфоны</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Телевизоры</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Ноутбуки</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Планшеты</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Наушники</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Умные часы</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Проекторы</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Фотоаппараты</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Видеокамеры</a>
+                            </li>
+                        </ul>
+                        <ul class="uk-margin-remove uk-padding-remove">
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Холодильники</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Микроволновые печи</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Моечные машины</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Стиральные машины</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Морозильная камера</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Сушильные машины</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Пылесосы</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Роботы-пылесосы</a>
+                            </li>
+                            <li class="footer__list">
+                                <a href="#" class="uk-margin-remove footer__link">Вытяжки</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="uk-width-expand@m">
+                    <div class="uk-flex uk-flex-around@m uk-flex-between">
+                        <div class="">
+                            <h2 class="uk-margin-remove footer__title">Сервис</h2>
+                            <div class="uk-flex uk-flex-between uk-flex-top footer__block">
+                                <ul class="uk-margin-remove uk-padding-remove">
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Срочный ремонт</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Диагностика</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Выезд и доставка</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Комплектующие</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Цены на ремонт</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Контакты</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">О нас</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="">
+                            <h2 class="uk-margin-remove footer__title">Города</h2>
+                            <div class="uk-flex uk-flex-between uk-flex-top footer__block">
+                                <ul class="uk-margin-remove uk-padding-remove">
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Санкт-Петербург</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Новосибирск</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Новокузнецк</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Пенза</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Чебоксары</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Тверь</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Новороссийск</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Тула</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Омск</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__accordion">
+                <ul uk-accordion>
+                    <li class="uk-open">
+                        <a class="uk-accordion-title footer__click" href="#">Ремонт техники</a>
+                        <div class="uk-accordion-content">
+                            <div class="uk-flex uk-flex-between uk-flex-top footer__section">
+                                <ul class="uk-margin-remove uk-padding-remove">
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Смартфоны</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Телевизоры</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Ноутбуки</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Планшеты</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Наушники</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Умные часы</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Проекторы</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Фотоаппараты</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Видеокамеры</a>
+                                    </li>
+                                </ul>
+                                <ul class="uk-margin-remove uk-padding-remove">
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Холодильники</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Микроволновые печи</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Моечные машины</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Стиральные машины</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Морозильная камера</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Сушильные машины</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Пылесосы</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Роботы-пылесосы</a>
+                                    </li>
+                                    <li class="footer__list">
+                                        <a href="#" class="uk-margin-remove footer__link">Вытяжки</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title footer__click" href="#">Сервис</a>
+                        <div class="uk-accordion-content">
+                            <div class="uk-flex uk-flex-between uk-flex-top footer__section">
+                                <ul class="uk-margin-remove uk-padding-remove">
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Срочный ремонт</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Диагностика</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Выезд и доставка</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Комплектующие</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Цены на ремонт</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">Контакты</a>
+                                    </li>
+                                    <li class="footer__list footer__list_service">
+                                        <a href="#" class="uk-margin-remove footer__link">О нас</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title footer__click" href="#">Города</a>
+                        <div class="uk-accordion-content">
+                            <div class="uk-flex uk-flex-between uk-flex-top footer__section">
+                                <ul class="uk-margin-remove uk-padding-remove">
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Санкт-Петербург</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Новосибирск</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Новокузнецк</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Пенза</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Чебоксары</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Тверь</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Новороссийск</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Тула</a>
+                                    </li>
+                                    <li class="footer__list footer__list_city">
+                                        <a href="#" class="uk-margin-remove footer__link">Омск</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-flex uk-flex-between uk-flex-middle footer__bottom">
+                <a href="#" class="uk-margin-remove footer__info">© 2022 СЕРВИСНЫЙ ЦЕНТР ПО SAMSUNG</a>
+                <p class="uk-margin-remove footer__text">Информация на сайте не является публичной офертой и носит исключительно информационный характер. Окончательные условия предоставления услуг определяются менеджером компании по итогам проведения программной или аппаратной диагностики и согласовываются с владельцами техники по телефону. Название компании Samsung, ее логотипы, используются на сайте с целью ознакомления. Russia Expert не является официальным сервисным центром Samsung. Пользовательское соглашение.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="modal-sign-up" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal">
+            <button class="uk-modal-close-default modal__close" type="button">
+                <img src="images/icon/x.svg" alt="">
+            </button>
+            <div>
+                <h2 class="uk-margin-remove modal__title">Записаться на ремонт<br>со скидкой 10%</h2>
+                <form class="uk-grid-small modal__form" uk-grid>
+                    <div class="uk-width-1-1">
+                        <input class="input input__consultation" name="text" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="uk-width-1-1">
+                        <input class="input input__consultation js-phone" name="tel" type="tel" placeholder="Номер телефона">
+                    </div>
+                    <div class="uk-width-1-1">
+                        <select class="uk-select select" aria-label="Select">
+                            <option disabled selected>Выберите тип техники</option>
+                            <option value="Смартфон">Смартфон</option>
+                            <option value="Ноутбук">Ноутбук</option>
+                        </select>
+                    </div>
+                    <div class="uk-width-1-1">
+                        <button class="button button__consultation" type="button" uk-toggle="target: #modal-thanks">Записаться на ремонт</button>
+                    </div>
+                </form>
+                <div class="uk-margin-remove uk-grid">
+                    <label class="modal__label">
+                        <input class="modal__checkbox" type="checkbox">
+                        <span class="modal__small">Я даю своё согласие на обработку персональных данных</span>
+                    </label>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <div id="modal-status" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal modal_status">
+            <button class="uk-modal-close-default modal__close" type="button">
+                <img src="images/icon/x.svg" alt="">
+            </button>
+            <div>
+                <h2 class="uk-margin-remove modal__title modal__title_status">Статус заказа</h2>
+                <p class="uk-margin-remove modal__subtitle">Для уточнения информации по ремонту введите номер для проверки в это поле:</p>
+                <form class="uk-grid-small modal__form modal__form_status" uk-grid>
+                    <div class="uk-width-1-2@s">
+                        <input class="input input__modal" name="number" type="number" placeholder="Пример: 7182">
+                    </div>
+                    <div class="uk-width-1-2@s">
+                        <button class="button button__consultation" type="button" uk-toggle="target: #modal-error">Проверить</button>
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+    </div>
+    <div id="modal-thanks" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal modal_thanks">
+            <button class="uk-modal-close-default modal__close" type="button">
+                <img src="images/icon/x.svg" alt="">
+            </button>
+            <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-column">
+                <img src="images/icon/check.svg" alt="" class="modal__svg">
+                <h2 class="uk-margin-remove modal__title modal__title_thanks">Спасибо за заявку!</h2>
+                <p class="uk-margin-remove modal__subtitle modal__subtitle_thanks">Наш менеджер свяжется с вами в ближайшее время</p>
+                <button class="uk-modal-close button button__consultation">Окей</button>
+            </div>
+    
+        </div>
+    </div>
+    <div id="modal-error" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal modal_thanks">
+            <button class="uk-modal-close-default modal__close" type="button">
+                <img src="images/icon/x.svg" alt="">
+            </button>
+            <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-column">
+                <img src="images/icon/error.svg" alt="" class="modal__svg">
+                <h2 class="uk-margin-remove modal__title modal__title_thanks">Ошибочка</h2>
+                <p class="uk-margin-remove modal__subtitle modal__subtitle_thanks">Неверно введены данные, попробуйте снова</p>
+                <button class="uk-modal-close button button__consultation">Попробую ещё</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

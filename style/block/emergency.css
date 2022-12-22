@@ -41,6 +41,9 @@
   line-height: 140%;
   padding-top: 12px;
 }
+.emergency__subtitle_padding {
+  padding-top: 0;
+}
 .emergency__services {
   padding: 25px 0;
 }
