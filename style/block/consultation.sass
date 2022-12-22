@@ -1,0 +1,160 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.consultation
+    padding: 40px 0 80px 0
+
+    &__block
+        background: var(--color-consultation)
+        border-radius: 8px
+        overflow: hidden
+
+    &__left
+        padding: 41px 0 56px 60px
+
+        &_inactive
+            display: none
+
+    &__title
+        @include title
+
+        &_indent
+            padding-top: 20px
+
+    &__subtitle
+        font-size: $font-main
+        line-height: 23px
+        padding: 12px 0 30px 0
+
+        &_indent
+            padding: 12px 0 0 0
+            text-align: center
+
+    &__text 
+        font-size: $font-tiny
+        line-height: 15px
+        text-align: center
+        padding-top: 12px
+
+    &__link
+        color: var(--color-black)
+        text-decoration: underline
+
+        &:hover
+            color: var(--color-black)
+            text-decoration: underline
+
+    &__right
+        position: relative
+        overflow: hidden
+
+        &::before
+            position: absolute
+            content: ''
+            width: 739px
+            height: 709px
+            top: -170px
+            right: -104px
+            background: url('../../images/mask-group-2.png') no-repeat
+
+    &__img
+        position: absolute
+        bottom: 0
+        right: 56px
+
+    &__thanks
+        padding: 107px 0 107px 100px
+        display: none
+
+        &_active
+            display: block
+
+    &__svg 
+        width: 80px
+        height: 80px
+
+    &__sorry
+        padding: 107px 0 107px 100px
+        display: none
+
+        &_active
+            display: block
+
+@media screen and (max-width: 1122px) 
+    .consultation
+        &__img
+            right: 0
+
+@media screen and (max-width: 1024px) 
+    .consultation
+        &__left
+            padding: 35px 0 50px 40px
+
+        &__right
+            &::before
+                width: 543px
+                height: 521px
+                top: -64px
+                right: -72px
+                background: url('../../images/mask-group-2-small.png') no-repeat
+
+        &__img
+            width: 353px
+            height: 376px
+            object-fit: contain
+            right: 40px
+            bottom: -50px
+
+@media screen and (max-width: 640px)
+    .consultation
+        padding: 20px 0 50px 0
+
+        &__block
+            overflow: hidden
+
+        &__left
+            padding: 30px 20px 0 20px
+
+        &__title
+            font-size: $font-subtitle
+            line-height: 28px
+
+            &_indent
+                padding-top: 16px
+
+        &__subtitle
+            font-size: $font-small
+            line-height: 20px
+            padding: 8px 0 20px 0
+
+            &_indent
+                padding: 8px 0 16px 0
+
+        &__text
+            display: none
+
+        &__right
+            height: 230px
+
+            &::before
+                width: 506px
+                height: 311px
+                top: -34px
+                background: url('../../images/mask-group-2-tiny.png') no-repeat
+                right: calc((100vw - 506px)/2)
+
+        &__img
+            width: 300px
+            height: 319px
+            right: calc((100vw - 300px)/2)
+
+        &__thanks
+            padding: 75px 20px 0 20px
+
+        &__svg 
+            width: 50px
+            height: 50px
+
+        &__sorry
+            padding: 75px 20px 0 20px

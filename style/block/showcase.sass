@@ -1,0 +1,63 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.showcase
+    padding: 5px 0 35px 0
+
+    &__title
+        @include subtitle
+
+    &__block
+        padding-top: 25px
+
+    &__link
+        text-decoration: none
+
+    &__card
+        padding: 25px 35px 30px 35px
+        background: var(--color-card)
+        border-radius: 20px
+
+        &:hover
+            background: var(--color-card-hover)
+
+    &__images
+        width: 193px
+        height: 114px
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+    &__name
+        font-weight: 500
+        font-size: $font-small
+        line-height: 20px
+        text-align: center
+        color: var(--color-black)
+        padding-top: 18px
+
+    &__bottom
+        padding-top: 35px
+
+@media screen and (max-width: 1024px)
+    .showcase
+        &__card
+            padding: 20px 20px 25px 20px
+
+        &__images
+            width: 156px
+            height: 93px
+
+@media screen and (max-width: 720px)
+    .showcase
+        padding: 5px 0 15px 0
+        
+        &__card
+            padding: 15px 11px
+
+        &__images
+            width: 144px
+            height: 75px

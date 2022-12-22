@@ -1,0 +1,109 @@
+:root {
+  --color-black: #01010A;
+  --color-dark: #0B0B14;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-blue: #F2F7FB;
+  --color-card: #F5F5F5;
+  --color-card-hover: #E9E9E9;
+  --color-main: #2675C3;
+  --color-main-hover: #1C6BB9;
+  --color-placeholder: #797979;
+  --color-yellow: #FEBE13;
+  --color-violet: #AC4AD5;
+  --color-turquoise: #4091E1;
+  --color-orange: #F7A225;
+  --color-nav: #A7A8AB;
+  --color-consultation: #ECECFA;
+  --color-border: #D9D9D9;
+}
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-white);
+  padding: 14px 0;
+  width: 165px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button__black {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-black);
+}
+.button__black_small {
+  width: 100%;
+}
+.button__black:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.button__dark {
+  background: rgba(255, 255, 255, 0.12);
+  margin-left: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.button__dark_small {
+  margin: 12px 0 0 0;
+  width: 100%;
+}
+.button__dark:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.button__capital {
+  background-color: var(--color-main);
+  border: none;
+  width: 100%;
+  z-index: 2;
+}
+.button__capital:hover {
+  background-color: var(--color-main-hover);
+}
+.button__consultation {
+  width: 100%;
+  border: none;
+  background-color: var(--color-main);
+}
+.button__consultation:hover {
+  background-color: var(--color-main-hover);
+}
+.button__repairs {
+  background-color: var(--color-main);
+  border: none;
+  width: 310px;
+  z-index: 2;
+}
+.button__repairs:hover {
+  background-color: var(--color-main-hover);
+}
+.button__repairs_none {
+  display: none;
+}
+.button__emergency {
+  background-color: var(--color-main);
+  border: none;
+  width: 100%;
+  z-index: 2;
+}
+
+@media screen and (max-width: 960px) {
+  .button__repairs {
+    display: none;
+  }
+  .button__repairs_none {
+    display: block;
+    background-color: var(--color-main);
+    border: none;
+    width: 100%;
+    z-index: 2;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .button__consultation {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=button.css.map */

@@ -1,0 +1,190 @@
+:root {
+  --color-black: #01010A;
+  --color-dark: #0B0B14;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-blue: #F2F7FB;
+  --color-card: #F5F5F5;
+  --color-card-hover: #E9E9E9;
+  --color-main: #2675C3;
+  --color-main-hover: #1C6BB9;
+  --color-placeholder: #797979;
+  --color-yellow: #FEBE13;
+  --color-violet: #AC4AD5;
+  --color-turquoise: #4091E1;
+  --color-orange: #F7A225;
+  --color-nav: #A7A8AB;
+  --color-consultation: #ECECFA;
+  --color-border: #D9D9D9;
+}
+
+.emergency {
+  padding: 30px 0 15px 0;
+}
+.emergency__left {
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 35px 49px;
+  max-width: 555px;
+  width: 100%;
+}
+.emergency__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+.emergency__title_padding {
+  padding-top: 25px;
+}
+.emergency__subtitle {
+  font-size: 16px;
+  line-height: 140%;
+  padding-top: 12px;
+}
+.emergency__services {
+  padding: 25px 0;
+}
+.emergency__list {
+  list-style-type: none;
+  padding: 12px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+.emergency__link {
+  position: relative;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-main);
+  padding-left: 24px;
+}
+.emergency__link::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-main);
+  top: 8px;
+  left: 12px;
+}
+.emergency__registry {
+  padding-top: 12px;
+}
+.emergency__roster {
+  font-size: 16px;
+  line-height: 140%;
+}
+.emergency__right {
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 14px 46px 30px 46px;
+}
+.emergency__telephone {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--color-black);
+}
+.emergency__text {
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 8px;
+}
+.emergency__request {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  display: block;
+}
+.emergency__request_inactive {
+  display: none;
+}
+.emergency__caption {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  padding-top: 20px;
+}
+.emergency__version {
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 8px;
+}
+.emergency__form {
+  padding: 18px 0 14px 0;
+}
+.emergency__small {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: rgba(2, 1, 5, 0.6);
+}
+.emergency__thanks {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 30px 0 10px 0;
+  display: none;
+}
+.emergency__thanks_active {
+  display: flex;
+}
+.emergency__img {
+  width: 70px;
+  height: 70px;
+}
+.emergency__big {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  padding-top: 20px;
+}
+.emergency__tiny {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 8px;
+}
+.emergency__sorry {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 30px 0 10px 0;
+  display: none;
+}
+.emergency__sorry_active {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .emergency__left {
+    background: inherit;
+    border-radius: 10px;
+    padding: 40px 0;
+    max-width: auto;
+    width: auto;
+  }
+  .emergency__title {
+    max-width: auto;
+    width: auto;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .emergency__subtitle {
+    max-width: auto;
+    width: auto;
+  }
+  .emergency__services {
+    padding: 18px 0;
+  }
+  .emergency__right {
+    background: inherit;
+    border-radius: 10px;
+    padding: 0;
+  }
+  .emergency__telephone {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .emergency__text {
+    padding-top: 6px;
+  }
+  .emergency__img {
+    width: 50px;
+    height: 50px;
+  }
+}/*# sourceMappingURL=emergency.css.map */

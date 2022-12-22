@@ -1,0 +1,181 @@
+:root {
+  --color-black: #01010A;
+  --color-dark: #0B0B14;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-blue: #F2F7FB;
+  --color-card: #F5F5F5;
+  --color-card-hover: #E9E9E9;
+  --color-main: #2675C3;
+  --color-main-hover: #1C6BB9;
+  --color-placeholder: #797979;
+  --color-yellow: #FEBE13;
+  --color-violet: #AC4AD5;
+  --color-turquoise: #4091E1;
+  --color-orange: #F7A225;
+  --color-nav: #A7A8AB;
+  --color-consultation: #ECECFA;
+  --color-border: #D9D9D9;
+}
+
+.consultation {
+  padding: 40px 0 80px 0;
+}
+.consultation__block {
+  background: var(--color-consultation);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.consultation__left {
+  padding: 41px 0 56px 60px;
+}
+.consultation__left_inactive {
+  display: none;
+}
+.consultation__title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 34px;
+}
+.consultation__title_indent {
+  padding-top: 20px;
+}
+.consultation__subtitle {
+  font-size: 18px;
+  line-height: 23px;
+  padding: 12px 0 30px 0;
+}
+.consultation__subtitle_indent {
+  padding: 12px 0 0 0;
+  text-align: center;
+}
+.consultation__text {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  padding-top: 12px;
+}
+.consultation__link {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+.consultation__link:hover {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+.consultation__right {
+  position: relative;
+  overflow: hidden;
+}
+.consultation__right::before {
+  position: absolute;
+  content: "";
+  width: 739px;
+  height: 709px;
+  top: -170px;
+  right: -104px;
+  background: url("../../images/mask-group-2.png") no-repeat;
+}
+.consultation__img {
+  position: absolute;
+  bottom: 0;
+  right: 56px;
+}
+.consultation__thanks {
+  padding: 107px 0 107px 100px;
+  display: none;
+}
+.consultation__thanks_active {
+  display: block;
+}
+.consultation__svg {
+  width: 80px;
+  height: 80px;
+}
+.consultation__sorry {
+  padding: 107px 0 107px 100px;
+  display: none;
+}
+.consultation__sorry_active {
+  display: block;
+}
+
+@media screen and (max-width: 1122px) {
+  .consultation__img {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .consultation__left {
+    padding: 35px 0 50px 40px;
+  }
+  .consultation__right::before {
+    width: 543px;
+    height: 521px;
+    top: -64px;
+    right: -72px;
+    background: url("../../images/mask-group-2-small.png") no-repeat;
+  }
+  .consultation__img {
+    width: 353px;
+    height: 376px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    right: 40px;
+    bottom: -50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .consultation {
+    padding: 20px 0 50px 0;
+  }
+  .consultation__block {
+    overflow: hidden;
+  }
+  .consultation__left {
+    padding: 30px 20px 0 20px;
+  }
+  .consultation__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .consultation__title_indent {
+    padding-top: 16px;
+  }
+  .consultation__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px 0 20px 0;
+  }
+  .consultation__subtitle_indent {
+    padding: 8px 0 16px 0;
+  }
+  .consultation__text {
+    display: none;
+  }
+  .consultation__right {
+    height: 230px;
+  }
+  .consultation__right::before {
+    width: 506px;
+    height: 311px;
+    top: -34px;
+    background: url("../../images/mask-group-2-tiny.png") no-repeat;
+    right: calc((100vw - 506px) / 2);
+  }
+  .consultation__img {
+    width: 300px;
+    height: 319px;
+    right: calc((100vw - 300px) / 2);
+  }
+  .consultation__thanks {
+    padding: 75px 20px 0 20px;
+  }
+  .consultation__svg {
+    width: 50px;
+    height: 50px;
+  }
+  .consultation__sorry {
+    padding: 75px 20px 0 20px;
+  }
+}/*# sourceMappingURL=consultation.css.map */

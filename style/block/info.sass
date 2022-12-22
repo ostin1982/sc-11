@@ -1,0 +1,61 @@
+@import 'colors'
+@import 'fonts'
+
+.info
+    background: var(--color-blue)
+    padding: 40px 0
+
+    &__block
+        overflow-x: scroll
+        scrollbar-width: none
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        &::-webkit-scrollbar 
+            width: 0
+            height: 0
+
+    &__card
+        background: var(--color-white)
+        border: 1px solid rgba(0, 0, 0, 0.05)
+        border-radius: 3px
+        padding: 21px 15px
+        cursor: pointer
+        margin-right: 20px
+        width: 250px
+
+        &:hover
+            border: 1px solid var(--color-main)
+
+
+    &__round
+        width: 56px
+        height: 56px
+        border-radius: 50%
+
+        &_yellow 
+            background: var(--color-yellow)
+
+        &_violet
+            background: var(--color-violet)
+
+        &_turquoise 
+            background: var(--color-turquoise)
+
+        &_orange
+            background: var(--color-orange)
+
+    &__text 
+        font-weight: 500
+        font-size: $font-small
+        line-height: 20px
+        padding-left: 16px
+        color: var(--color-black)
+
+@media screen and (max-width: 720px) 
+    .info
+        &__block
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 12px

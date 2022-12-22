@@ -1,0 +1,112 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.stage
+    padding: 35px 0
+
+    &__title
+        @include title
+        padding-bottom: 35px
+
+    &__left
+        overflow: hidden
+        background: var(--color-white)
+        border: 1px solid rgba(0, 0, 0, 0.05)
+        border-radius: 3px
+        min-width: 458px
+
+    &__list
+        width: 100%
+        padding: 21px 0
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+        
+
+        &:last-child
+            border-bottom: 0px
+
+    &__link
+        font-weight: 500
+        font-size: $font-main
+        line-height: 23px
+        color: var(--color-nav)
+        text-align: center
+        margin: 0 auto
+
+    &__card
+        padding: 20px
+        background: var(--color-white)
+        border-radius: 3px
+
+    &__background
+        background: rgba(38, 117, 195, 0.06)
+        border-radius: 3px
+        min-width: 242px
+        width: 242px
+        max-width: 100%
+        height: 290px
+
+    &__text
+        padding-left: 30px
+
+    &__number
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background: var(--color-main)
+        font-weight: 800
+        font-size: $font-main
+        line-height: 23px
+        color: var(--color-white)
+
+    &__head
+        font-weight: 500
+        font-size: $font-small
+        line-height: 20px
+        color: var(--color-black)
+        padding: 20px 0 8px 0
+
+    &__wording
+        font-weight: 400
+        font-size: $font-small
+        line-height: 20px
+        color: var(--color-black)
+
+@media screen and (max-width: 720px) 
+    .stage
+        padding: 15px 0
+
+        &__left
+            display: flex
+            overflow-x: scroll
+            min-width: auto
+
+        &__list
+            min-width: 254px
+            border-radius: 8px
+            padding: 20px 22px
+
+        &__link
+            text-align: left
+            font-size: $font-small
+            line-height: 20px
+
+        &__card
+            flex-direction: column
+
+        &__background
+            min-width: auto
+            width: 100%
+            max-width: 100%
+            height: 125px
+
+        &__img
+            width: 88px
+            height: 96px
+            object-fit: contain
+
+        &__number
+            display: none
+
+        &__text
+            padding: 16px 0 5px 0

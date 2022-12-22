@@ -1,0 +1,138 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.repairs
+    &__block
+        background: var(--color-white)
+        border-radius: 10px
+        padding: 30px 30px 30px 50px
+
+    &__left
+        padding-top: 10px
+
+    &__heading
+        font-weight: 700
+        font-size: $font-title
+        line-height: 34px
+        width: 410px
+
+    &__list
+        list-style-type: none
+        padding: 31px 0 43px 60px
+
+    &__link 
+        @include list
+
+        &:last-child
+            padding-bottom: 0
+
+        &_gear 
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 28px
+                height: 28px
+                top: 0
+                left: -40px
+                background-image: url('../../images/icon/gear.svg')
+
+        &_shild 
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 21px
+                height: 26px
+                top: 0
+                left: -36px
+                background-image: url('../../images/icon/shild.svg')
+
+        &_car
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 28px
+                height: 24px
+                top: 0
+                left: -38px
+                background-image: url('../../images/icon/car.svg')
+
+        &_chip
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 26px
+                height: 26px
+                top: 0
+                left: -38px
+                background-image: url('../../images/icon/chip.svg')
+
+        &_tick
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 26px
+                height: 26px
+                top: 0
+                left: -38px
+                background-image: url('../../images/icon/tick.svg')
+
+        &_box
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 26px
+                height: 26px
+                top: 0
+                left: -38px
+                background-image: url('../../images/icon/box.svg')
+
+        &_clock
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                width: 26px
+                height: 26px
+                top: 0
+                left: -38px
+                background-image: url('../../images/icon/clock.svg')
+
+    &__right
+        width: 100%
+        height: 100%
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+@media screen and (max-width: 960px) 
+    .repairs
+        &__block
+            padding: 30px 0 0 0
+            background: inherit
+
+        &__left
+            padding-top: 0
+
+        &__heading
+            font-size: $font-subtitle
+            line-height: 28px
+            width: 100%
+
+        &__list
+            padding: 22px 0 0 60px

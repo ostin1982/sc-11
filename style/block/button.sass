@@ -1,0 +1,83 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.button
+    @include button
+
+    &__black 
+        border: 1px solid rgba(255, 255, 255, 0.12)
+        background: var(--color-black)
+
+        &_small
+            width: 100%
+
+        &:hover
+            border: 1px solid rgba(255, 255, 255, 0.5)
+
+    &__dark
+        background: rgba(255, 255, 255, 0.12)
+        margin-left: 30px
+        border: 1px solid rgba(255, 255, 255, 0.12)
+
+        &_small
+            margin: 12px 0 0 0
+            width: 100%
+
+        &:hover
+            background: rgba(255, 255, 255, 0.2)
+            border: 1px solid rgba(255, 255, 255, 0.2)
+
+    &__capital 
+        background-color: var(--color-main)
+        border: none
+        width: 100%
+        z-index: 2
+
+        &:hover
+            background-color: var(--color-main-hover)
+
+    &__consultation
+        width: 100%
+        border: none
+        background-color: var(--color-main)
+
+        &:hover
+            background-color: var(--color-main-hover)
+
+    &__repairs
+        background-color: var(--color-main)
+        border: none
+        width: 310px
+        z-index: 2
+        
+        &:hover
+            background-color: var(--color-main-hover)
+
+        &_none
+            display: none
+
+    &__emergency
+        background-color: var(--color-main)
+        border: none
+        width: 100%
+        z-index: 2
+
+@media screen and (max-width: 960px)
+    .button
+        &__repairs
+            display: none
+
+            &_none
+                display: block
+                background-color: var(--color-main)
+                border: none
+                width: 100%
+                z-index: 2
+                border-radius: 8px
+
+@media screen and (max-width: 640px)
+    .button
+        &__consultation
+            font-size: $font-small
+            line-height: 20px

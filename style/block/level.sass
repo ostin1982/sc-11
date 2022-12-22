@@ -1,0 +1,26 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.level
+    padding: 35px 0
+
+    &__title
+        @include title
+
+    &__subtitle
+        @include text
+        padding-top: 18px
+
+@media screen and (max-width: 720px) 
+    .level
+        padding: 15px 0
+
+        &__title
+            font-size: $font-subtitle
+            line-height: 28px
+
+        &__subtitle
+            font-size: $font-little
+            line-height: 18px
+            padding-top: 12px

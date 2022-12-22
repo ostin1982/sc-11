@@ -1,0 +1,50 @@
+@import 'colors'
+    
+.uk-nav-default>li.uk-active>a 
+    color: var(--color-white)
+
+.uk-nav-default>li>a:hover
+    color: var(--color-main)
+
+.uk-nav-default>li.uk-active
+    background: var(--color-main)
+
+.uk-nav-default>li.uk-active>a:hover
+    color: var(--color-white)
+
+.uk-open>.uk-accordion-title::before 
+    background-image: url('../../images/icon/chevron-down-blue.svg')
+
+.uk-open>.uk-accordion-title
+    color: var(--color-main)
+    border: 1px solid var(--color-main)
+
+.uk-accordion-title::before
+    background-image: url('../../images/icon/chevron-down.svg')
+
+.uk-accordion-title 
+    color: var(--color-white)
+    border: 1px solid #2A2A31
+
+.uk-select:not([multiple]):not([size])
+    height: auto
+    background-image: url('../../images/icon/chevron-down.png')
+    background-position-x: calc(100% - 14px)
+    appearance: none
+
+.uk-modal
+    padding: calc((100vh - 470px)/2) 0 0 0
+
+@media screen and (max-width: 1300px)    
+    .uk-position-center-left-out 
+        right: 98.5%
+
+    .uk-position-center-right-out 
+        left: 98.5%
+
+@media screen and (max-width: 960px)    
+    .uk-position-center-left-out 
+        right: 96%
+
+    .uk-position-center-right-out 
+        left: 96%

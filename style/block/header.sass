@@ -1,0 +1,124 @@
+@import 'colors'
+@import 'fonts'
+
+.header
+    &__top
+        padding: 9px 0
+        background-color: var(--color-dark)
+
+    &__telephone
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-white)
+        opacity: 0.8
+
+    &__address
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-white)
+        opacity: 0.3
+
+        &_padding
+            padding-right: 14px
+
+    &__telephone
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-white)
+        opacity: 0.8
+
+    &__bottom
+        background-color: var(--color-black)
+        padding: 10px 0 16px 0
+
+    &__status
+        display: none
+
+    &__link 
+        font-weight: 500
+        font-size: $font-small
+        line-height: 20px
+        color: var(--color-white)
+
+        &:hover
+            color: var(--color-main)
+            text-decoration: none
+
+        &:focus
+            color: var(--color-main)
+            text-decoration: underline
+
+    &__hidden
+        display: none
+
+@media screen and (max-width: 860px) 
+    .header
+        &__top
+            display: none
+
+        &__bottom
+            padding: 10px 0
+
+        &__status
+            display: block
+
+        &__nav
+            display: none
+
+        &__buttons
+            display: none
+
+        &__hidden
+            display: block
+
+        &__menu
+            background-color: var(--color-black)
+            width: 100vw
+
+        &__logo
+            text-align: left
+            width: 100%
+
+        &__padding
+            padding-top: 28px
+            width: 100%
+
+        &__direction
+            font-size: $font-little
+            line-height: 18px
+            color: var(--color-white)
+            opacity: 0.3
+            padding-top: 8px
+            text-align: left
+
+        &__box
+            text-align: left
+
+        &__phone
+            font-size: $font-little
+            line-height: 18px
+            color: var(--color-white)
+            opacity: 0.8
+
+        &__daily
+            font-size: $font-little
+            line-height: 18px
+            color: var(--color-white)
+            opacity: 0.3
+            padding-top: 6px
+
+        &__checklist
+            list-style-type: none
+            text-align: center
+
+        &__ref
+            padding-top: 35px
+
+        &__transition
+            font-weight: 500
+            font-size: $font-small
+            line-height: 20px
+            color: var(--color-white)
+
+        &__big
+            width: 100%

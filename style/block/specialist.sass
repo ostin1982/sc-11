@@ -1,0 +1,102 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.specialist
+    padding: 35px 0
+
+    &__block
+        position: relative
+        overflow: hidden
+        border-radius: 8px
+        border: 1px solid rgba(0, 0, 0, 0.08)
+
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: -92px
+            background-image: url('../../images/vector-right-2.png')
+            width: 640px
+            height: 711px
+            z-index: 1
+
+    &__left
+        padding: 40px 0 40px 40px
+        width: 652px
+
+    &__title
+        @include title
+
+    &__subtitle
+        @include text
+        padding-top: 18px
+
+    &__right
+        position: relative
+        overflow: hidden
+        height: 246px
+
+        &::before
+            content: ''
+            position: absolute
+            top: 57px
+            right: -100px
+            background-image: url('../../images/ellipse-bottom.png')
+            width: 504px
+            height: 190px
+            z-index: 1
+
+@media screen and (max-width: 1024px)
+    .specialist
+        &__left
+            padding: 30px 0 30px 40px
+            width: auto
+
+        &__right
+            &::before
+                top: 57px
+                right: -100px
+                background-image: url('../../images/ellipse-bottom-small.png')
+                width: 378px
+                height: 223px
+
+@media screen and (max-width: 720px)
+    .specialist
+        padding: 40px 0 25px 0
+
+        &__block
+            border: none
+
+            &::before
+                display: none
+
+        &__title
+            font-size: $font-subtitle
+            line-height: 28px
+
+        &__subtitle 
+            font-size: $font-little
+            line-height: 18px
+            padding-top: 12px
+
+        &__right
+            position: relative
+            border: 1px solid var(--color-border)
+            border-radius: 20px
+            height: 171px
+
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                right: -20px
+                background-image: url('../../images/vector-right-4.png')
+                width: 300px
+                height: 334px
+                z-index: 1
+
+            &::before
+                top: 10px
+                right: -77px
+                z-index: 3

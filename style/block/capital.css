@@ -1,0 +1,219 @@
+:root {
+  --color-black: #01010A;
+  --color-dark: #0B0B14;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-blue: #F2F7FB;
+  --color-card: #F5F5F5;
+  --color-card-hover: #E9E9E9;
+  --color-main: #2675C3;
+  --color-main-hover: #1C6BB9;
+  --color-placeholder: #797979;
+  --color-yellow: #FEBE13;
+  --color-violet: #AC4AD5;
+  --color-turquoise: #4091E1;
+  --color-orange: #F7A225;
+  --color-nav: #A7A8AB;
+  --color-consultation: #ECECFA;
+  --color-border: #D9D9D9;
+}
+
+.capital {
+  position: relative;
+  overflow: hidden;
+}
+.capital::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../images/vector-left.png");
+  width: 640px;
+  height: 711px;
+  z-index: 1;
+}
+.capital::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../../images/vector-right.png");
+  width: 640px;
+  height: 711px;
+  z-index: 1;
+}
+.capital__block {
+  align-items: flex-end;
+}
+.capital__left {
+  padding: 80px 0 71px 0;
+  z-index: 5;
+}
+.capital__heading {
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 47px;
+}
+.capital__list {
+  list-style-type: none;
+  padding: 51px 0 60px 40px;
+}
+.capital__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  padding-bottom: 27px;
+}
+.capital__link:last-child {
+  padding-bottom: 0;
+}
+.capital__link_gear {
+  position: relative;
+}
+.capital__link_gear::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 0;
+  left: -40px;
+  background-image: url("../../images/icon/gear.svg");
+}
+.capital__link_shild {
+  position: relative;
+}
+.capital__link_shild::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 26px;
+  top: 0;
+  left: -36px;
+  background-image: url("../../images/icon/shild.svg");
+}
+.capital__link_car {
+  position: relative;
+}
+.capital__link_car::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 24px;
+  top: 0;
+  left: -38px;
+  background-image: url("../../images/icon/car.svg");
+}
+.capital__form {
+  display: flex;
+  width: 343px;
+  z-index: 2;
+}
+.capital__form_small {
+  display: none;
+}
+.capital__right {
+  position: relative;
+  width: 455px;
+  height: 546px;
+  z-index: 2;
+}
+.capital__right::before {
+  content: "";
+  position: absolute;
+  width: 1028px;
+  height: 623px;
+  top: 33px;
+  right: -300px;
+  background-image: url("../../images/mask-group.png");
+  z-index: -1;
+}
+.capital__picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .capital::after {
+    left: -280px;
+  }
+  .capital::before {
+    right: -280px;
+  }
+  .capital__heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .capital__list {
+    padding: 40px 0 40px 40px;
+  }
+  .capital__right {
+    width: 375px;
+    height: 450px;
+  }
+  .capital__right::before {
+    width: 682px;
+    height: 414px;
+    top: 74px;
+    right: -204px;
+    background-image: url("../../images/mask-group-small.png");
+  }
+}
+@media screen and (max-width: 860px) {
+  .capital::after {
+    display: none;
+  }
+  .capital__block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .capital__left {
+    padding: 40px 0;
+    z-index: 5;
+  }
+  .capital__list {
+    padding: 30px 0 30px 40px;
+  }
+  .capital__form {
+    display: none;
+  }
+  .capital__form_small {
+    display: flex;
+    width: 100%;
+  }
+  .capital__box {
+    position: relative;
+    left: -16px;
+    background: var(--color-background);
+    border-radius: 16px 16px 0px 0px;
+    padding: 16px;
+    width: 100%;
+    z-index: 100;
+  }
+  .capital__right {
+    width: 249px;
+    height: 249px;
+  }
+  .capital__right::before {
+    width: 870px;
+    height: 324px;
+    top: 33px;
+    right: -70vw;
+    background-image: url("../../images/mask-group-tiny.png");
+  }
+  .capital__picture {
+    position: relative;
+    left: calc((100vw - 250px) / 2);
+  }
+}
+@media screen and (max-width: 480px) {
+  .capital__heading {
+    font-size: 27px;
+    line-height: 34px;
+  }
+  .capital__link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=capital.css.map */

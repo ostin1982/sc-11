@@ -1,0 +1,94 @@
+:root {
+  --color-black: #01010A;
+  --color-dark: #0B0B14;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-blue: #F2F7FB;
+  --color-card: #F5F5F5;
+  --color-card-hover: #E9E9E9;
+  --color-main: #2675C3;
+  --color-main-hover: #1C6BB9;
+  --color-placeholder: #797979;
+  --color-yellow: #FEBE13;
+  --color-violet: #AC4AD5;
+  --color-turquoise: #4091E1;
+  --color-orange: #F7A225;
+  --color-nav: #A7A8AB;
+  --color-consultation: #ECECFA;
+  --color-border: #D9D9D9;
+}
+
+.standard {
+  padding: 5px 0 35px 0;
+}
+.standard__link {
+  text-decoration: none;
+}
+.standard__link:hover {
+  text-decoration: none;
+}
+.standard__card {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  height: 197px;
+}
+.standard__card:hover {
+  border: 1px solid var(--color-main);
+}
+.standard__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -92px;
+  background-image: url("../../images/vector-right-3.png");
+  width: 280px;
+  height: 312px;
+  z-index: 1;
+}
+.standard__left {
+  padding: 25px 0 25px 30px;
+  height: 147px;
+}
+.standard__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--color-black);
+}
+.standard__subtitle {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-black);
+  padding: 8px 0 16px 0;
+}
+.standard__transition {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
+}
+.standard__icon {
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .standard__card {
+    height: 237px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .standard__card {
+    height: 250px;
+  }
+  .standard__left {
+    padding: 25px 35px 25px 25px;
+  }
+  .standard__right {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    z-index: 100;
+  }
+}/*# sourceMappingURL=standard.css.map */

@@ -1,0 +1,54 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.input
+    @include input
+
+    &::placeholder
+        color: var(--color-placeholder)
+        font-weight: 400
+        font-size: $font-main
+        line-height: 23px
+
+    &:focus-visible
+        border: 1px solid var(--color-main)
+        outline: 1px solid var(--color-main)
+
+    &__capital 
+        padding: 17px 22px
+        width: 299px
+        margin-bottom: 16px
+        z-index: 2
+
+    &__consultation
+        padding: 17px 22px
+        z-index: 2
+        width: calc( 100% - 44px )
+
+    &__modal
+        padding: 13px 22px
+        z-index: 2
+        width: calc( 100% - 44px )
+
+        &::placeholder
+            font-weight: 400
+            font-size: $font-small
+            line-height: 20px
+
+    &__emergency
+        padding: 13px 22px
+        width: calc(100% - 44px)
+        margin-bottom: 16px
+        z-index: 2
+
+@media screen and (max-width: 860px) 
+    .input
+        &__capital
+            width: calc( 100% - 46px )
+
+@media screen and (max-width: 720px) 
+    .input
+        &::placeholder
+            font-size: $font-small
+            line-height: 20px

@@ -1,0 +1,122 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.footer
+    background: var(--color-black)
+    padding: 50px 0 30px 0 
+
+    &__top
+        padding-bottom: 50px
+
+    &__title
+        font-weight: 700
+        font-size: 16px
+        line-height: 20px
+        color: var(--color-white)
+        text-align: left
+        padding-bottom: 12px
+
+    &__block
+        padding-top: 25px
+        border-top: 1px solid rgba(255, 255, 255, 0.16)
+
+    &__list
+        list-style-type: none
+        text-align: left
+        width: 180px
+        padding-bottom: 14px
+
+        &:last-child
+            padding-bottom: 0
+
+        &_service
+            width: 165px
+
+        &_city
+            width: 360px
+
+    &__link
+        font-size: 16px
+        line-height: 20px
+        color: var(--color-white)
+        text-align: left
+
+        &:hover
+            color: var(--color-main)
+            text-decoration: none
+
+        &:focus
+            color: var(--color-main)
+            text-decoration: underline
+
+    &__accordion
+        display: none
+
+    &__bottom
+        padding-top: 30px
+        border-top: 1px solid rgba(255, 255, 255, 0.16)
+
+    &__info
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-white)
+
+        &:hover
+            color: var(--color-main)
+            text-decoration: none
+
+        &:focus
+            color: var(--color-main)
+            text-decoration: underline
+
+    &__text
+        font-size: $font-teeny
+        line-height: 14px
+        color: var(--color-white)
+        opacity: 0.6
+        max-width: 750px
+
+@media screen and (max-width: 1024px) 
+    .footer
+        padding: 25px 0 50px 0 
+
+        &__list
+            &_service
+                width: auto
+
+            &_city
+                width: auto
+
+@media screen and (max-width: 720px) 
+    .footer
+        &__top
+            display: none
+
+        &__accordion
+            display: block
+            width: 100%
+
+        &__click 
+            font-size: $font-little
+            line-height: 18px
+            text-align: left
+            padding: 12px
+            border-radius: 6px
+
+        &__section
+            border: none
+            padding-top: 0
+
+        &__bottom
+            flex-direction: column
+            padding-top: 50px
+
+        &__text
+            padding-top: 25px
+            max-width: 100%
+
+@media screen and (max-width: 420px) 
+    .footer
+        &__list
+            width: auto

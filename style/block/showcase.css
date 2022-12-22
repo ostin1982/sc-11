@@ -1,0 +1,85 @@
+:root {
+  --color-black: #01010A;
+  --color-dark: #0B0B14;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+  --color-blue: #F2F7FB;
+  --color-card: #F5F5F5;
+  --color-card-hover: #E9E9E9;
+  --color-main: #2675C3;
+  --color-main-hover: #1C6BB9;
+  --color-placeholder: #797979;
+  --color-yellow: #FEBE13;
+  --color-violet: #AC4AD5;
+  --color-turquoise: #4091E1;
+  --color-orange: #F7A225;
+  --color-nav: #A7A8AB;
+  --color-consultation: #ECECFA;
+  --color-border: #D9D9D9;
+}
+
+.showcase {
+  padding: 5px 0 35px 0;
+}
+.showcase__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+.showcase__block {
+  padding-top: 25px;
+}
+.showcase__link {
+  text-decoration: none;
+}
+.showcase__card {
+  padding: 25px 35px 30px 35px;
+  background: var(--color-card);
+  border-radius: 20px;
+}
+.showcase__card:hover {
+  background: var(--color-card-hover);
+}
+.showcase__images {
+  width: 193px;
+  height: 114px;
+}
+.showcase__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.showcase__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-black);
+  padding-top: 18px;
+}
+.showcase__bottom {
+  padding-top: 35px;
+}
+
+@media screen and (max-width: 1024px) {
+  .showcase__card {
+    padding: 20px 20px 25px 20px;
+  }
+  .showcase__images {
+    width: 156px;
+    height: 93px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .showcase {
+    padding: 5px 0 15px 0;
+  }
+  .showcase__card {
+    padding: 15px 11px;
+  }
+  .showcase__images {
+    width: 144px;
+    height: 75px;
+  }
+}/*# sourceMappingURL=showcase.css.map */

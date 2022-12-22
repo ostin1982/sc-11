@@ -1,0 +1,157 @@
+@import 'colors'
+@import 'fonts'
+
+.modal
+    background: var(--color-white)
+    border-radius: 10px
+    padding: 35px 25px
+
+    &_status
+        padding: 30px
+
+    &_thanks
+        width: 555px
+        padding: 46px 25px 25px 25px
+
+    &__close
+        border: none
+        background: var(--color-white)
+        cursor: pointer
+
+    &__title
+        font-weight: 700
+        font-size: $font-title
+        line-height: 34px
+        text-align: center
+
+        &_status
+            font-size: $font-subtitle
+            line-height: 28px
+            text-align: left
+
+        &_thanks
+            font-size: $font-heading
+            line-height: 47px
+            padding-top: 25px
+
+    &__subtitle
+        font-size: $font-small
+        line-height: 20px
+        padding-top: 8px
+        width: 320px
+
+        &_thanks
+            font-size: $font-subtitle
+            line-height: 140%
+            padding: 12px 0 46px 0
+            text-align: center
+            width: 350px
+
+    &__form
+        padding: 25px 0 18px 0
+
+        &_status
+            padding: 16px 0 0 0
+
+    &__checkbox
+        position: relative
+
+        &[type="checkbox"]:before
+            position: relative
+            display: block
+            width: 12px
+            height: 12px
+            border: 2px solid var(--color-main)
+            border-radius: 2px
+            content: ''
+            background: var(--color-white)
+            cursor: pointer
+        
+        &[type="checkbox"]:after
+            position: relative
+            display: block
+            left: 0
+            top: -16px
+            width: 12px
+            height: 12px
+            border: 2px solid var(--color-placeholder)
+            content: ''
+            cursor: pointer
+
+        &[type="checkbox"]:checked:after
+            position: absolute
+            content: ''
+            top: 4px
+            left: 4px
+            width: 8px
+            height: 8px
+            background: var(--color-main)
+            border-radius: 1px
+            border: none
+        
+        &[type="checkbox"]:disabled:after
+            -webkit-filter: opacity(0.4)
+        
+        &[type="checkbox"]:not(:disabled):checked:hover:after
+            position: absolute
+            content: ''
+            top: 4px
+            left: 4px
+            width: 8px
+            height: 8px
+            background: var(--color-main)
+            border-radius: 1px
+            border: none
+        
+        &[type="checkbox"]:not(:disabled):hover:after
+            border: 2px solid var(--color-main)
+        
+        &[type="checkbox"]:not(:disabled):hover:before
+            border: 2px solid var(--color-main)
+
+    &__small
+        font-size: $font-little
+        line-height: 18px
+        color: rgba(2, 1, 5, 0.6)
+        padding-left: 12px
+
+    &__svg
+        width: 100px
+        height: 100px
+
+@media screen and (max-width: 720px) 
+    .modal
+        padding: 25px 16px
+        width: 343px
+
+        &_status
+            padding: 30px 16px 16px 16px
+
+        &_thanks
+            padding: 37px 16px 16px 16px
+
+        &__title
+            font-size: $font-subtitle
+            line-height: 28px
+
+            &_thanks
+                padding-top: 20px
+
+        &__subtitle
+            &_thanks
+                font-size: $font-small
+                padding: 12px 0 38px 0
+                width: auto
+
+        &__form
+            padding: 25px 0 14px 0
+
+            &_status
+                padding: 16px 0 0 0
+
+        &__label
+            padding-left: 10px
+
+        &__svg
+            width: 80px
+            height: 80px

@@ -1,0 +1,170 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.emergency
+    padding: 30px 0 15px 0
+
+    &__left
+        background: var(--color-white)
+        border-radius: 10px
+        padding: 35px 49px
+        max-width: 555px
+        width: 100%
+
+    &__title
+        @include subtitle
+
+        &_padding
+            padding-top: 25px
+
+    &__subtitle
+        font-size: $font-small
+        line-height: 140%
+        padding-top: 12px
+
+    &__services
+        padding: 25px 0
+
+    &__list
+        list-style-type: none
+        padding: 12px 0
+        border-top: 1px solid rgba(0, 0, 0, 0.16)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16)
+
+    &__link
+        position: relative
+        font-size: $font-small
+        line-height: 150%
+        color: var(--color-main)
+        padding-left: 24px
+
+        &::before
+            content: ''
+            position: absolute
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            background: var(--color-main)
+            top: 8px
+            left: 12px
+
+    &__registry
+        padding-top: 12px
+
+    &__roster
+        font-size: $font-small
+        line-height: 140%
+
+    &__right
+        background: var(--color-white)
+        border-radius: 10px
+        padding: 14px 46px 30px 46px
+
+    &__telephone
+        font-weight: 700
+        font-size: $font-subtitle
+        line-height: 28px
+        color: var(--color-black)
+
+    &__text
+        font-size: $font-small
+        line-height: 20px
+        padding-top: 8px
+
+    &__request
+        border-top: 1px solid rgba(0, 0, 0, 0.16)
+        display: block
+
+        &_inactive
+            display: none
+
+    &__caption
+        font-weight: 500
+        font-size: $font-main
+        line-height: 23px
+        padding-top: 20px
+
+    &__version
+        font-size: $font-small
+        line-height: 20px
+        padding-top: 8px
+
+    &__form
+        padding: 18px 0 14px 0
+
+    &__small
+        font-size: $font-tiny
+        line-height: 15px
+        text-align: center
+        color: rgba(2, 1, 5, 0.6)
+
+    &__thanks
+        border-top: 1px solid rgba(0, 0, 0, 0.16)
+        padding: 30px 0 10px 0
+        display: none
+
+        &_active
+            display: flex
+
+    &__img
+        width: 70px
+        height: 70px
+
+    &__big
+        font-weight: 500
+        font-size: $font-main
+        line-height: 23px
+        padding-top: 20px
+
+    &__tiny
+        font-size: $font-small
+        line-height: 20px
+        text-align: center
+        padding-top: 8px
+
+    &__sorry
+        border-top: 1px solid rgba(0, 0, 0, 0.16)
+        padding: 30px 0 10px 0
+        display: none
+
+        &_active
+            display: flex
+
+@media screen and (max-width: 960px) 
+    .emergency
+        &__left
+            background: inherit
+            border-radius: 10px
+            padding: 40px 0
+            max-width: auto
+            width: auto
+
+        &__title
+            max-width: auto
+            width: auto
+            font-size: $font-main
+            line-height: 23px
+
+        &__subtitle
+            max-width: auto
+            width: auto
+
+        &__services
+            padding: 18px 0
+
+        &__right
+            background: inherit
+            border-radius: 10px
+            padding: 0
+
+        &__telephone
+            font-size: $font-main
+            line-height: 23px
+
+        &__text
+            padding-top: 6px
+
+        &__img
+            width: 50px
+            height: 50px

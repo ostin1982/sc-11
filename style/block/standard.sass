@@ -1,0 +1,76 @@
+@import 'colors'
+@import 'fonts'
+@import 'mixin'
+
+.standard
+    padding: 5px 0 35px 0
+
+    &__link
+        text-decoration: none
+
+        &:hover
+            text-decoration: none
+
+    &__card
+        position: relative
+        overflow: hidden
+        background: var(--color-white)
+        border: 1px solid rgba(0, 0, 0, 0.03)
+        border-radius: 20px
+        height: 197px
+
+        &:hover
+            border: 1px solid var(--color-main)
+
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: -92px
+            background-image: url('../../images/vector-right-3.png')
+            width: 280px
+            height: 312px
+            z-index: 1
+
+    &__left 
+        padding: 25px 0 25px 30px
+        height: 147px
+
+    &__title
+        font-weight: 700
+        font-size: $font-main
+        line-height: 23px
+        color: var(--color-black)
+
+    &__subtitle
+        font-size: $font-small
+        line-height: 20px
+        color: var(--color-black)
+        padding: 8px 0 16px 0
+
+    &__transition
+        font-size: $font-small
+        line-height: 20px
+        color: var(--color-main)
+
+    &__icon
+        z-index: 2
+
+@media screen and (max-width: 1024px) 
+    .standard
+        &__card
+            height: 237px
+
+@media screen and (max-width: 720px) 
+    .standard
+        &__card
+            height: 250px
+
+        &__left
+            padding: 25px 35px 25px 25px
+
+        &__right
+            position: absolute
+            bottom: 14px
+            right: 14px
+            z-index: 100

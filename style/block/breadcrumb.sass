@@ -1,0 +1,40 @@
+@import 'colors'
+@import 'fonts'
+
+.breadcrumb
+    padding: 30px 0 20px 0
+
+    &__list
+        list-style-type: none
+        padding-left: 0
+
+    &__title
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-main)
+
+        &:hover
+            text-decoration: none
+
+    &__subtitle
+        position: relative
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-black)
+        padding-left: 28px
+
+        &::before
+            position: absolute
+            content: ""
+            background-image: url('../../images/icon/pointer.svg')
+            background-repeat: no-repeat
+            background-position-x: center
+            background-position-y: center
+            width: 7px
+            height: 18px
+            top: 0
+            left: 14px
+
+@media screen and (max-width: 720px) 
+    .breadcrumb
+        display: none
