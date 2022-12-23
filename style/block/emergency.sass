@@ -64,6 +64,11 @@
         border-radius: 10px
         padding: 14px 46px 30px 46px
 
+        &_color
+            background: inherit
+            padding: 0
+            border-radius: 0
+
     &__telephone
         font-weight: 700
         font-size: $font-subtitle
@@ -157,6 +162,111 @@
         &_br
             display: none
 
+    &__wrapper
+        width: 100%
+        margin-top: 22px
+
+    &__item
+        border: 1px solid rgba(0, 0, 0, 0.12)
+        border-radius: 6px
+        margin-bottom: 12px
+
+        &:last-child
+            margin-bottom: 0
+        
+        &_active
+            & .emergency__triger
+                background: var(--color-main)
+                border-radius: 6px
+
+            & .emergency__indicator
+                color: var(--color-white)
+
+            & .emergency__svg
+                transform: rotate(90deg)
+
+                & path
+                    stroke: var(--color-white)
+
+            & .emergency__content
+                display: block
+
+    &__triger
+        padding: 13px 16px
+        border-radius: 6px
+        cursor: pointer
+
+    &__indicator
+        font-size: $font-small
+        line-height: 20px
+
+    &__svg
+        & path
+            stroke: var(--color-black)
+
+    &__content
+        display: none
+
+    &__line
+        cursor: pointer
+        margin: 0 16px
+
+        &_none
+            display: none
+
+    &__service
+        padding: 12px 0px !important
+        font-size: $font-little
+        line-height: 18px
+
+    &__mode
+        padding: 12px 16px
+
+    &__more
+        font-weight: 500
+        font-size: $font-little
+        line-height: 18px
+        color: var(--color-main)
+
+        &_none
+            display: none
+
+    &__block
+        display: block
+        margin-top: 25px
+        padding: 16px
+        border: 1px solid rgba(0, 0, 0, 0.12)
+        border-radius: 6px
+
+    &__top
+        background: var(--color-white)
+        border-radius: 10px
+        padding: 35px 50px 35px 40px
+        margin-bottom: 30px
+
+    &__box
+        margin: 0
+        padding: 0
+
+    &__for
+        padding-top: 12px
+        list-style-type: none
+
+    &__you
+        font-size: $font-small
+        line-height: 20px
+        color: var(--color-black)
+
+        &:hover
+            color: var(--color-black)
+            text-decoration: none
+
+    &__bottom
+        background: var(--color-white)
+        border-radius: 10px
+        padding: 14px 46px 30px 46px
+
+
 @media screen and (max-width: 960px) 
     .emergency
         &__left
@@ -165,6 +275,9 @@
             padding: 40px 0
             max-width: auto
             width: auto
+
+            &_width
+                max-width: 100%
 
         &__title
             max-width: auto

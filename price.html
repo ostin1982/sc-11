@@ -56,10 +56,10 @@
                                 <a href="#" class="uk-margin-remove header__link">Главная</a>
                             </li>
                             <li>
-                                <a href="#" class="uk-margin-remove header__link">Цены</a>
+                                <a href="#" class="uk-margin-remove header__link header__link_active">Цены</a>
                             </li>
                             <li>
-                                <a href="#" class="uk-margin-remove header__link header__link_active">Контакты</a>
+                                <a href="#" class="uk-margin-remove header__link">Контакты</a>
                             </li>
                             <li>
                                 <a href="#" class="uk-margin-remove header__link">О нас</a>
@@ -125,7 +125,7 @@
                     <a href="#" class="breadcrumb__title">Главная</a>
                 </li>
                 <li>
-                    <span class="breadcrumb__subtitle">Контакты</span>
+                    <span class="breadcrumb__subtitle">Цены</span>
                 </li>
             </ul>
         </div>
@@ -136,18 +136,18 @@
                 <div uk-grid>
                     <div class="uk-width-auto@m">
                         <div class="repairs__left">
-                            <h1 class="uk-margin-remove repairs__heading">Контакты для связи с нашим сервисом</h1>
+                            <h1 class="uk-margin-remove repairs__heading">Цены на обслуживание техники Samsung</h1>
                             <ul class="uk-margin-remove repairs__list">
-                                <li class="repairs__link repairs__link_headphones">Оперативная техподдержка</li>
-                                <li class="repairs__link repairs__link_calendar">Без праздников и выходных</li>
-                                <li class="repairs__link repairs__link_pin">Выезд курьера в любую точку Москвы</li>
+                                <li class="repairs__link repairs__link_gear">Бесплатная диагностика техники</li>
+                                <li class="repairs__link repairs__link_book">Подробный перечень услуг</li>
+                                <li class="repairs__link repairs__link_shild">Гарантия на выполненные работы</li>
                             </ul>
-                            <button class="button button__repairs" type="button" uk-toggle="target: #modal-sign-up">Заказать звонок</button>
+                            <button class="button button__repairs" type="button" uk-toggle="target: #modal-sign-up">Узнать стоимость ремонта</button>
                         </div>
                     </div>
                     <div class="uk-width-expand@m repairs__right">
-                        <img src="images/map.png" alt="профессионал ремонта за работой" class="repairs__img">
-                        <button class="button button__repairs_none" type="button" uk-toggle="target: #modal-sign-up">Заказать звонок</button>
+                        <img src="images/master.png" alt="профессионал ремонта за работой" class="repairs__img">
+                        <button class="button button__repairs_none" type="button" uk-toggle="target: #modal-sign-up">Узнать стоимость ремонта</button>
                     </div>
                 </div>
             </div>
@@ -157,28 +157,221 @@
         <div class="uk-container">
             <div class="uk-grid-small" uk-grid>
                 <div class="uk-width-auto@m" >
-                    <div class="emergency__left">
-                        <p class="uk-margin-remove emergency__subtitle">Обслуживание техники Samsung осуществляется в сервисном центре или с выездом курьера на дом или в офис.</p>
-                        <div class="emergency__services">
-                            <ul class="emergency__list">
-                                <li>
-                                    <a href="#" class="uk-margin-remove emergency__link">Комплектующие</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="uk-margin-remove emergency__link">Диагностика</a>
-                                </li>
-                            </ul>
+                    <div class="emergency__left emergency__left_width">
+                        <h2 class="uk-margin-remove emergency__title">Цены на услуги по ремонту смартфонов Samsung</h2>
+                        <p class="uk-margin-remove emergency__subtitle">Цена на ремонт формируется из стоимости запчасти и стоимости услуг мастера. Мы заботимся о своих клиентах и снижаем цены до минимума, используя для ремонта детали от производителя.</p>
+                        <div class="emergency__wrapper">
+                            <div class="emergency__accordion">
+                                <div class="emergency__item">
+                                    <div class="uk-flex uk-flex-between uk-flex-middle emergency__triger">
+                                        <p class="uk-margin-remove emergency__indicator">Ремонт смартфонов</p>
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" class="emergency__svg" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 13L7 7L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="emergency__content">
+                                        <form class="emergency__mode">
+                                            <input id="myInput" class="input input__accordion" type="search" placeholder="Поиск по таблице">
+                                        </form>
+                                        <table class="uk-margin-remove uk-table uk-table-divider" id="myTable">
+                                            <tbody>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Диагностика</td>
+                                                    <td class="emergency__service">Бесплатно</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена корпуса</td>
+                                                    <td class="emergency__service">710 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена дисплея</td>
+                                                    <td class="emergency__service">400 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена контроллера питания</td>
+                                                    <td class="emergency__service">860 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Ремонт корпуса</td>
+                                                    <td class="emergency__service">900 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Прошивка</td>
+                                                    <td class="emergency__service">1050 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Замена кнопки</td>
+                                                    <td class="emergency__service">550 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Ремонт материнской платы</td>
+                                                    <td class="emergency__service">1300 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-center uk-flex-middle emergency__line">
+                                                    <td class="emergency__more" colspan="2"><a href="#">Показать больше</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="emergency__item">
+                                    <div class="uk-flex uk-flex-between uk-flex-middle emergency__triger">
+                                        <p class="uk-margin-remove emergency__indicator">Ремонт телевизоров</p>
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" class="emergency__svg" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 13L7 7L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="emergency__content">
+                                        <form class="emergency__mode">
+                                            <input id="myInput" class="input input__accordion" type="search" placeholder="Поиск по таблице">
+                                        </form>
+                                        <table class="uk-margin-remove uk-table uk-table-divider" id="myTable">
+                                            <tbody>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Диагностика</td>
+                                                    <td class="emergency__service">Бесплатно</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена корпуса</td>
+                                                    <td class="emergency__service">710 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена дисплея</td>
+                                                    <td class="emergency__service">400 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена контроллера питания</td>
+                                                    <td class="emergency__service">860 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Ремонт корпуса</td>
+                                                    <td class="emergency__service">900 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Прошивка</td>
+                                                    <td class="emergency__service">1050 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Замена кнопки</td>
+                                                    <td class="emergency__service">550 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Ремонт материнской платы</td>
+                                                    <td class="emergency__service">1300 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-center uk-flex-middle emergency__line">
+                                                    <td class="emergency__more" colspan="2"><a href="#">Показать больше</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="emergency__item">
+                                    <div class="uk-flex uk-flex-between uk-flex-middle emergency__triger">
+                                        <p class="uk-margin-remove emergency__indicator">Ремонт ноутбуков</p>
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" class="emergency__svg" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 13L7 7L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="emergency__content">
+                                        <form class="emergency__mode">
+                                            <input id="myInput" class="input input__accordion" type="search" placeholder="Поиск по таблице">
+                                        </form>
+                                        <table class="uk-margin-remove uk-table uk-table-divider" id="myTable">
+                                            <tbody>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Диагностика</td>
+                                                    <td class="emergency__service">Бесплатно</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена корпуса</td>
+                                                    <td class="emergency__service">710 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена дисплея</td>
+                                                    <td class="emergency__service">400 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена контроллера питания</td>
+                                                    <td class="emergency__service">860 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Ремонт корпуса</td>
+                                                    <td class="emergency__service">900 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Прошивка</td>
+                                                    <td class="emergency__service">1050 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Замена кнопки</td>
+                                                    <td class="emergency__service">550 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Ремонт материнской платы</td>
+                                                    <td class="emergency__service">1300 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-center uk-flex-middle emergency__line">
+                                                    <td class="emergency__more" colspan="2"><a href="#">Показать больше</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="emergency__item">
+                                    <div class="uk-flex uk-flex-between uk-flex-middle emergency__triger">
+                                        <p class="uk-margin-remove emergency__indicator">Ремонт планшетов</p>
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" class="emergency__svg" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 13L7 7L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="emergency__content">
+                                        <form class="emergency__mode">
+                                            <input id="myInput" class="input input__accordion" type="search" placeholder="Поиск по таблице">
+                                        </form>
+                                        <table class="uk-margin-remove uk-table uk-table-divider" id="myTable">
+                                            <tbody>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Диагностика</td>
+                                                    <td class="emergency__service">Бесплатно</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена корпуса</td>
+                                                    <td class="emergency__service">710 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена дисплея</td>
+                                                    <td class="emergency__service">400 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Замена контроллера питания</td>
+                                                    <td class="emergency__service">860 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Ремонт корпуса</td>
+                                                    <td class="emergency__service">900 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                                    <td class="emergency__service">Прошивка</td>
+                                                    <td class="emergency__service">1050 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Замена кнопки</td>
+                                                    <td class="emergency__service">550 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                                    <td class="emergency__service">Ремонт материнской платы</td>
+                                                    <td class="emergency__service">1300 ₽</td>
+                                                </tr>
+                                                <tr class="uk-flex uk-flex-center uk-flex-middle emergency__line">
+                                                    <td class="emergency__more" colspan="2"><a href="#">Показать больше</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="uk-margin-remove emergency__subtitle">Оставить заказ вы можете удобным для вас способом – по телефону или через форму заявки на сайте. При поступлении заявки наши менеджеры незамедлительно свяжутся с вами и уточнят детали заказа.</p>
-                        <h2 class="uk-margin-remove emergency__title emergency__title_padding">Контактная информация</h2>
-                        <div class="emergency__contacts">
-                            <p class="uk-margin-remove emergency__address">Адрес в Москве:<br class="emergency__address_br"> <span class="emergency__address_401">ул Профсоюзная, д 58, к 4</span></p>
-                            <p class="uk-margin-remove emergency__address">Телефон горячей линии:<br class="emergency__address_br"> <a href="tel: +74951060627" class="emergency__address_400">+7 (495) 106-06-27</a></p>
-                            <p class="uk-margin-remove emergency__address">По вопросам:<br class="emergency__address_br"> <a href="mailto: support@galaxy-russia-support.com" class="emergency__address_400">support@galaxy-russia-support.com</a></p>
-                            <p class="uk-margin-remove emergency__address">Для корпоративных клиентов:<br class="emergency__address_br"> <a href="mailto: corp@galaxy-russia-support.com" class="emergency__address_400">corp@galaxy-russia-support.com</a></p>
-                            <p class="uk-margin-remove emergency__address">Руководство:<br class="emergency__address_br"> <a href="mailto: director@galaxy-russia-support.com" class="emergency__address_400">director@galaxy-russia-support.com</a></p>
-                        </div>
-                        <p class="uk-margin-remove emergency__subtitle">График работы сервисного центра: ежедневно и круглосуточно</p>
                     </div>
                 </div>
                 <div class="uk-width-expand@m">

@@ -59,7 +59,7 @@
                                 <a href="#" class="uk-margin-remove header__link">Цены</a>
                             </li>
                             <li>
-                                <a href="#" class="uk-margin-remove header__link header__link_active">Контакты</a>
+                                <a href="#" class="uk-margin-remove header__link">Контакты</a>
                             </li>
                             <li>
                                 <a href="#" class="uk-margin-remove header__link">О нас</a>
@@ -125,7 +125,10 @@
                     <a href="#" class="breadcrumb__title">Главная</a>
                 </li>
                 <li>
-                    <span class="breadcrumb__subtitle">Контакты</span>
+                    <a href="#" class="breadcrumb__title breadcrumb__title_arrow">Ремонт смартфонов</a>
+                </li>
+                <li>
+                    <span class="breadcrumb__subtitle">Замена дисплея</span>
                 </li>
             </ul>
         </div>
@@ -136,18 +139,18 @@
                 <div uk-grid>
                     <div class="uk-width-auto@m">
                         <div class="repairs__left">
-                            <h1 class="uk-margin-remove repairs__heading">Контакты для связи с нашим сервисом</h1>
+                            <h1 class="uk-margin-remove repairs__heading">Замена дисплея смартфонов Samsung</h1>
                             <ul class="uk-margin-remove repairs__list">
-                                <li class="repairs__link repairs__link_headphones">Оперативная техподдержка</li>
-                                <li class="repairs__link repairs__link_calendar">Без праздников и выходных</li>
-                                <li class="repairs__link repairs__link_pin">Выезд курьера в любую точку Москвы</li>
+                                <li class="repairs__link repairs__link_clock">Примерное время ремонта 1 час</li>
+                                <li class="repairs__link repairs__link_book">Стоимость услуги от 400₽</li>
+                                <li class="repairs__link repairs__link_shild">Гарантия на услуги до 3 лет</li>
                             </ul>
-                            <button class="button button__repairs" type="button" uk-toggle="target: #modal-sign-up">Заказать звонок</button>
+                            <button class="button button__repairs" type="button" uk-toggle="target: #modal-sign-up">Узнать стоимость ремонта</button>
                         </div>
                     </div>
                     <div class="uk-width-expand@m repairs__right">
-                        <img src="images/map.png" alt="профессионал ремонта за работой" class="repairs__img">
-                        <button class="button button__repairs_none" type="button" uk-toggle="target: #modal-sign-up">Заказать звонок</button>
+                        <img src="images/smartphone.png" alt="большое количество смартфонов" class="repairs__img">
+                        <button class="button button__repairs_none" type="button" uk-toggle="target: #modal-sign-up">Узнать стоимость ремонта</button>
                     </div>
                 </div>
             </div>
@@ -157,66 +160,112 @@
         <div class="uk-container">
             <div class="uk-grid-small" uk-grid>
                 <div class="uk-width-auto@m" >
-                    <div class="emergency__left">
-                        <p class="uk-margin-remove emergency__subtitle">Обслуживание техники Samsung осуществляется в сервисном центре или с выездом курьера на дом или в офис.</p>
-                        <div class="emergency__services">
-                            <ul class="emergency__list">
-                                <li>
-                                    <a href="#" class="uk-margin-remove emergency__link">Комплектующие</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="uk-margin-remove emergency__link">Диагностика</a>
-                                </li>
-                            </ul>
+                    <div class="emergency__left emergency__left_width">
+                        <h2 class="uk-margin-remove emergency__title">Требуется ли вам замена дисплея ?</h2>
+                        <p class="uk-margin-remove emergency__subtitle">Если вы нашли поломку своего гаджета и вам требуется замена дисплея смартфона Samsung, мы во что бы то ни стало вам поможем. Каждый программный глюк или физическое повреждение девайса, будут ликвидированы нашими квалифицированными инженерами в минимальные сроки за низкую стоимость.</p>
+                        <p class="uk-margin-remove emergency__subtitle">В нашем сервисе работают только компетентные штатные специалисты, которые обладают многолетним стажем. Каждый штатный сотрудник прошел повышение квалификации и имеет соответствующий сертификат. На все исполненные работы выдаем гарантию от 3-х месяцев. Мы обещаем нашим клиентам добросовестно исполненную работу и внимательное отношение. Вы можете быть уверены, что сделали верный выбор сервисного центра.</p>
+                        <div class="emergency__block">
+                            <form class="emergency__mode">
+                                <input id="myInput" class="input input__accordion" type="search" placeholder="Поиск по таблице">
+                            </form>
+                            <table class="uk-margin-remove uk-table uk-table-divider" id="myTable">
+                                <tbody>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                        <td class="emergency__service">Диагностика</td>
+                                        <td class="emergency__service">Бесплатно</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                        <td class="emergency__service">Замена корпуса</td>
+                                        <td class="emergency__service">710 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                        <td class="emergency__service">Замена дисплея</td>
+                                        <td class="emergency__service">400 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                        <td class="emergency__service">Замена контроллера питания</td>
+                                        <td class="emergency__service">860 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                        <td class="emergency__service">Ремонт корпуса</td>
+                                        <td class="emergency__service">900 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line">
+                                        <td class="emergency__service">Прошивка</td>
+                                        <td class="emergency__service">1050 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                        <td class="emergency__service">Замена кнопки</td>
+                                        <td class="emergency__service">550 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-between uk-flex-middle emergency__line emergency__line_none">
+                                        <td class="emergency__service">Ремонт материнской платы</td>
+                                        <td class="emergency__service">1300 ₽</td>
+                                    </tr>
+                                    <tr class="uk-flex uk-flex-center uk-flex-middle emergency__line">
+                                        <td class="emergency__more" colspan="2"><a href="#">Показать больше</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <p class="uk-margin-remove emergency__subtitle">Оставить заказ вы можете удобным для вас способом – по телефону или через форму заявки на сайте. При поступлении заявки наши менеджеры незамедлительно свяжутся с вами и уточнят детали заказа.</p>
-                        <h2 class="uk-margin-remove emergency__title emergency__title_padding">Контактная информация</h2>
-                        <div class="emergency__contacts">
-                            <p class="uk-margin-remove emergency__address">Адрес в Москве:<br class="emergency__address_br"> <span class="emergency__address_401">ул Профсоюзная, д 58, к 4</span></p>
-                            <p class="uk-margin-remove emergency__address">Телефон горячей линии:<br class="emergency__address_br"> <a href="tel: +74951060627" class="emergency__address_400">+7 (495) 106-06-27</a></p>
-                            <p class="uk-margin-remove emergency__address">По вопросам:<br class="emergency__address_br"> <a href="mailto: support@galaxy-russia-support.com" class="emergency__address_400">support@galaxy-russia-support.com</a></p>
-                            <p class="uk-margin-remove emergency__address">Для корпоративных клиентов:<br class="emergency__address_br"> <a href="mailto: corp@galaxy-russia-support.com" class="emergency__address_400">corp@galaxy-russia-support.com</a></p>
-                            <p class="uk-margin-remove emergency__address">Руководство:<br class="emergency__address_br"> <a href="mailto: director@galaxy-russia-support.com" class="emergency__address_400">director@galaxy-russia-support.com</a></p>
-                        </div>
-                        <p class="uk-margin-remove emergency__subtitle">График работы сервисного центра: ежедневно и круглосуточно</p>
+                        <p class="uk-margin-remove emergency__subtitle">Более подробную информацию по стоимости ремонта конкретно вашей поломки вы всегда можете узнать позвонив нашему менеджеру на горячую линиию. Так же вы можете оформить заявку или задать вопрос специалисту.</p>
                     </div>
                 </div>
                 <div class="uk-width-expand@m">
-                    <div class="emergency__right">
-                        <div uk-grid>
-                            <div class="uk-width-expand">
-                                <a href="tel: 74951060627" class="uk-margin-remove emergency__telephone">7 (495) 106-06-27</a>
-                                <p class="uk-margin-remove emergency__text">Номер телефона сервиса</p>
-                            </div>
-                            <div class="uk-width-auto">
-                                <picture>
-                                    <source srcset="images/icon/cloud-small.png" media="(max-width: 720px)"/>
-                                    <img src="images/icon/cloud.png" alt="">
-                                </picture>
-                            </div>
+                    <div class="emergency__right emergency__right_color">
+                        <div  class="emergency__top">
+                            <h2 class="uk-margin-remove emergency__title">Для вас бесплатно</h2>
+                            <ul class="emergency__box">
+                                <li class="emergency__for">
+                                    <a href="#" class="uk-margin-remove emergency__you">Диагностика</a>
+                                </li>
+                                <li class="emergency__for">
+                                    <a href="#" class="uk-margin-remove emergency__you">Консультация</a>
+                                </li>
+                                <li class="emergency__for">
+                                    <a href="#" class="uk-margin-remove emergency__you">Выезд мастера</a>
+                                </li>
+                                <li class="emergency__for">
+                                    <a href="#" class="uk-margin-remove emergency__you">Доставка</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="emergency__request">
-                            <div class="emergency__middle">
-                                <h3 class="uk-margin-remove emergency__caption">Спросите экспертов</h3>
-                                <p class="uk-margin-remove emergency__version">Получите консультацию специалистов нашего сервисного центра по вопросам ремонта и обслуживания техники.</p>
+                        <div class="emergency__bottom">
+                            <div uk-grid>
+                                <div class="uk-width-expand">
+                                    <a href="tel: 74951060627" class="uk-margin-remove emergency__telephone">7 (495) 106-06-27</a>
+                                    <p class="uk-margin-remove emergency__text">Номер телефона сервиса</p>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <picture>
+                                        <source srcset="images/icon/cloud-small.png" media="(max-width: 720px)"/>
+                                        <img src="images/icon/cloud.png" alt="">
+                                    </picture>
+                                </div>
                             </div>
-                            <form class="uk-flex-between uk-flex-top uk-flex-column emergency__form">
-                                <input class="input input__emergency js-phone" name="tel" type="tel" placeholder="Ваш номер телефона">
-                                <input class="input input__emergency" name="text" type="text" placeholder="Имя и фаимлия">
-                                <textarea class="textarea" name="textarea">Ваш вопрос</textarea>
-                                <button class="button button__emergency js-ask">Задать вопрос</button>
-                            </form>
-                            <p class="uk-margin-remove emergency__small">Отправляя свои данные вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</p>
-                        </div>
-                        <div class="uk-flex-column uk-flex-between uk-flex-middle emergency__thanks">
-                            <img src="images/icon/check.svg" alt="" class="emergency__img">
-                            <p class="uk-margin-remove emergency__big">Спасибо, обращение принято</p>
-                            <p class="uk-margin-remove emergency__tiny">В течение 5 минут один из специалистов Galaxy Service свяжется с вами</p>
-                        </div>
-                        <div class="uk-flex-column uk-flex-between uk-flex-middle emergency__sorry">
-                            <img src="images/icon/error.svg" alt="" class="emergency__img">
-                            <p class="uk-margin-remove emergency__big">Ошибочка</p>
-                            <p class="uk-margin-remove emergency__tiny">Неверно введены данные, попробуйте снова</p>
+                            <div class="emergency__request">
+                                <div class="emergency__middle">
+                                    <h3 class="uk-margin-remove emergency__caption">Спросите экспертов</h3>
+                                    <p class="uk-margin-remove emergency__version">Получите консультацию специалистов нашего сервисного центра по вопросам ремонта и обслуживания техники.</p>
+                                </div>
+                                <form class="uk-flex-between uk-flex-top uk-flex-column emergency__form">
+                                    <input class="input input__emergency js-phone" name="tel" type="tel" placeholder="Ваш номер телефона">
+                                    <input class="input input__emergency" name="text" type="text" placeholder="Имя и фаимлия">
+                                    <textarea class="textarea" name="textarea">Ваш вопрос</textarea>
+                                    <button class="button button__emergency js-ask">Задать вопрос</button>
+                                </form>
+                                <p class="uk-margin-remove emergency__small">Отправляя свои данные вы соглашаетесь с политикой конфиденциальности и обработки персональных данных</p>
+                            </div>
+                            <div class="uk-flex-column uk-flex-between uk-flex-middle emergency__thanks">
+                                <img src="images/icon/check.svg" alt="" class="emergency__img">
+                                <p class="uk-margin-remove emergency__big">Спасибо, обращение принято</p>
+                                <p class="uk-margin-remove emergency__tiny">В течение 5 минут один из специалистов Galaxy Service свяжется с вами</p>
+                            </div>
+                            <div class="uk-flex-column uk-flex-between uk-flex-middle emergency__sorry">
+                                <img src="images/icon/error.svg" alt="" class="emergency__img">
+                                <p class="uk-margin-remove emergency__big">Ошибочка</p>
+                                <p class="uk-margin-remove emergency__tiny">Неверно введены данные, попробуйте снова</p>
+                            </div>
                         </div>
                     </div>
                 </div>

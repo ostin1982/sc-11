@@ -16,6 +16,22 @@
         &:hover
             text-decoration: none
 
+        &_arrow
+            position: relative
+            padding-left: 28px
+
+            &::before
+                position: absolute
+                content: ""
+                background-image: url('../../images/icon/pointer.svg')
+                background-repeat: no-repeat
+                background-position-x: center
+                background-position-y: center
+                width: 7px
+                height: 18px
+                top: 0
+                left: 14px
+
     &__subtitle
         position: relative
         font-size: $font-little

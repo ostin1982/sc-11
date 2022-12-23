@@ -83,6 +83,23 @@
   margin-bottom: 16px;
   z-index: 2;
 }
+.input__accordion {
+  padding: 13px 22px;
+  width: 100%;
+  z-index: 2;
+}
+.input__accordion::-moz-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+}
+.input__accordion:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+}
+.input__accordion::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+}
 
 @media screen and (max-width: 860px) {
   .input__capital {

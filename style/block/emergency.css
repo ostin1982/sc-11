@@ -82,6 +82,11 @@
   border-radius: 10px;
   padding: 14px 46px 30px 46px;
 }
+.emergency__right_color {
+  background: inherit;
+  padding: 0;
+  border-radius: 0;
+}
 .emergency__telephone {
   font-weight: 700;
   font-size: 22px;
@@ -175,6 +180,108 @@
 .emergency__address_br {
   display: none;
 }
+.emergency__wrapper {
+  width: 100%;
+  margin-top: 22px;
+}
+.emergency__item {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.emergency__item:last-child {
+  margin-bottom: 0;
+}
+.emergency__item_active .emergency__triger {
+  background: var(--color-main);
+  border-radius: 6px;
+}
+.emergency__item_active .emergency__indicator {
+  color: var(--color-white);
+}
+.emergency__item_active .emergency__svg {
+  transform: rotate(90deg);
+}
+.emergency__item_active .emergency__svg path {
+  stroke: var(--color-white);
+}
+.emergency__item_active .emergency__content {
+  display: block;
+}
+.emergency__triger {
+  padding: 13px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.emergency__indicator {
+  font-size: 16px;
+  line-height: 20px;
+}
+.emergency__svg path {
+  stroke: var(--color-black);
+}
+.emergency__content {
+  display: none;
+}
+.emergency__line {
+  cursor: pointer;
+  margin: 0 16px;
+}
+.emergency__line_none {
+  display: none;
+}
+.emergency__service {
+  padding: 12px 0px !important;
+  font-size: 14px;
+  line-height: 18px;
+}
+.emergency__mode {
+  padding: 12px 16px;
+}
+.emergency__more {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-main);
+}
+.emergency__more_none {
+  display: none;
+}
+.emergency__block {
+  display: block;
+  margin-top: 25px;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+.emergency__top {
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 35px 50px 35px 40px;
+  margin-bottom: 30px;
+}
+.emergency__box {
+  margin: 0;
+  padding: 0;
+}
+.emergency__for {
+  padding-top: 12px;
+  list-style-type: none;
+}
+.emergency__you {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-black);
+}
+.emergency__you:hover {
+  color: var(--color-black);
+  text-decoration: none;
+}
+.emergency__bottom {
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 14px 46px 30px 46px;
+}
 
 @media screen and (max-width: 960px) {
   .emergency__left {
@@ -183,6 +290,9 @@
     padding: 40px 0;
     max-width: auto;
     width: auto;
+  }
+  .emergency__left_width {
+    max-width: 100%;
   }
   .emergency__title {
     max-width: auto;

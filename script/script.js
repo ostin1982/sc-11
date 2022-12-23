@@ -23,3 +23,41 @@ if($('.js-ask')) {
         })
     })
 }
+
+if($('.emergency__wrapper')) {
+    $(() => {
+        $('.emergency__triger').click(function() {
+            const parent = $(this).parent();
+
+            if(parent.hasClass('emergency__item_active')) {
+                parent.removeClass('emergency__item_active')
+            } else {
+                $('.emergency__item').removeClass('emergency__item_active')
+                parent.addClass('emergency__item_active')
+            }
+        })
+    })
+
+    $(() => {
+        $('.input__accordion').on('keyup', function() {
+            const value = $(this).val().toLowerCase();
+            
+            $('.emergency__line').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+    if($('.emergency__more')) {
+        $(() => {
+            $('.emergency__more').click((event) => {
+                event.preventDefault();
+
+                $('.emergency__line').removeClass('emergency__line_none');
+                $('.emergency__more').addClass('emergency__more_none')
+            })
+        })
+    }
+}
+
+
